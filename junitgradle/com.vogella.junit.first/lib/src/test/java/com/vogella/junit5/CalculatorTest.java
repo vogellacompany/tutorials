@@ -1,6 +1,7 @@
 package com.vogella.junit5;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -21,6 +22,12 @@ class CalculatorTest {
 	void testMultiply() {
 		assertEquals(20, calculator.multiply(4, 5), // <.>
 				"Regular multiplication should work"); // <.>
+	}
+
+	@Test // <.>
+	@DisplayName("Fails") // <.>
+	void testFails() {
+		assertTrue(false);
 	}
 
 	@RepeatedTest(5) // <.>

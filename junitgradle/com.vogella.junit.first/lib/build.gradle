@@ -18,7 +18,9 @@ repositories {
 
 dependencies {
     // Use JUnit Jupiter for testing.
-    testImplementation 'org.junit.jupiter:junit-jupiter:5.7.1'
+    implementation 'org.junit.platform:junit-platform-suite-api:1.8.0-M1'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.8.0-M1'
+    implementation 'org.junit.jupiter:junit-jupiter-engine:5.8.0-M1'
 
 }
 
