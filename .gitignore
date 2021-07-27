@@ -10,3 +10,4 @@ Snap.*
 /.settings/
 /.project
 .DS_Store
+.gradle
