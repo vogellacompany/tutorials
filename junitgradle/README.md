@@ -11,6 +11,7 @@ This folder contains example code for using JUnit5 with the Gradle build system
 - [Using Maven](https://www.vogella.com/tutorials/Maven/article.html)
 - [Using Maven with the Eclipse IDE](https://www.vogella.com/tutorials/EclipseMaven/article.html)
 - [Mockito tutorial](https://www.vogella.com/tutorials/Mockito/article.html)
+- [JUnit 5 extensions](https://www.vogella.com/tutorials/JUnit5Extensions/article.html)
 - [Hamcrest Tutorial](https://www.vogella.com/tutorials/Hamcrest/article.html)
 - [AssertJ Tutorial](https://www.vogella.com/tutorials/AssertJ/article.html)
 - [Checkstyle Tutorial](https://www.vogella.com/tutorials/Checkstyle/article.html)
