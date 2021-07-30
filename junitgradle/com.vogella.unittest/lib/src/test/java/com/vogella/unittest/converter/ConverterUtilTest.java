@@ -1,5 +1,8 @@
 package com.vogella.unittest.converter;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.DynamicTest.dynamicTest;
+
 import java.util.Arrays;
 import java.util.stream.Stream;
 
@@ -13,18 +16,25 @@ class ConverterUtilTest {
 	@TestFactory
 	Stream<DynamicTest> ensureThatCelsiumConvertsToFahrenheit() {
 		return Arrays.stream(celsiusFahrenheitMapping).map(entry -> {
-			// access celcius and fahrenheit from entry
 			int celsius = entry[0];
 			int fahrenheit = entry[1];
-			return null;
-			// return a dynamicTest which checks that that the convertion from celcius to
-			// fahrenheit is correct
+			return dynamicTest(celsius + " Celsius are " + fahrenheit + " Fahrenheit", () -> {
+				assertEquals(fahrenheit, ConverterUtil.convertCelsiusToFahrenheit(celsius));
+			});
 		});
-
 	}
 
-	Stream<DynamicTest> ensureThatFahrenheitToCelsiumConverts() {
-		return null;
-		// TODO Write a similar test fahrenheit to celsius
+	@TestFactory
+	Stream<DynamicTest> ensureThatFahrenheitToCelsius() {
+		return Arrays.stream(celsiusFahrenheitMapping).map(entry -> {
+			int celsius = entry[0];
+			int fahrenheit = entry[1];
+			return dynamicTest(fahrenheit + " Fahrenheit are " + celsius + " Celsius", () -> {
+				assertEquals(fahrenheit, ConverterUtil.convertCelsiusToFahrenheit(celsius));
+			});
+		});
 	}
+
+	// TODO Write a similar test fahrenheit to celsius
+
 }
