@@ -1,10 +1,9 @@
-Tutorials from http://www.vogella.com
-=====================================
+Code examples from http://www.vogella.com
+=========================================
 
-This project is **a collection of small and focused tutorials** - each covering a single and well defined area of development in the Java ecosystem. 
+This project is **a collection of small and focused code example** - each covering a single and well defined area of development in the Java ecosystem. 
 Each sub-topic is placed in a specific folder, so that you easily decide which part of the examples you want to import into your favorite IDE.
 Different examples use different build systems.
-
 
 Working with the IDE
 ====================
@@ -15,14 +14,14 @@ Simply import that particular module or folder in either Eclipse or IntelliJ.
 The Courses
 ==============================
 
-we also offer commercial training:
+We also offer commercial training:
 
 
 Here's the Master Class of "Using Git as version control system" (along with the handling of merge and pull request): <br/>
 **[>> USING THE GIT VERSION CONTROL SYSTEM - MASTER CLASS](https://learn.vogella.com/courses/details/git-version-control-system)**
 
 Here's the Master Class of "Java Testing Technologies": <br/>
-**[>> LEARN SPRING SECURITY - MASTER CLASS](https://www.vogella.com/training/testbuild/javatesting.html)**
+**[>> Java Testing Technologies - MASTER CLASS](https://www.vogella.com/training/testbuild/javatesting.html)**
 
 Here's the Master class of "Eclipse RCP for developing rich desktop clients with Java" : <br/>
 **[>> LEARN ECLIPSE RCP - THE MASTER CLASS](https://learn.vogella.com/courses/details/rich-client-platform)**
