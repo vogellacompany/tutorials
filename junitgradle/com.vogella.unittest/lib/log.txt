@@ -1,0 +1,21 @@
+> Task :lib:clean
+> Task :lib:compileJava
+> Task :lib:processResources
+> Task :lib:classes
+> Task :lib:compileTestJava
+> Task :lib:processTestResources NO-SOURCE
+> Task :lib:testClasses
+
+> Task :lib:test
+
+com.vogella.unittest.extension.LifeCycleExtensionTest > test1() STANDARD_OUT
+    test1() took 62 ms.
+
+com.vogella.unittest.extension.LifeCycleExtensionTest > test2() STANDARD_OUT
+    test2() took 0 ms.
+
+com.vogella.unittest.extension.LifeCycleExtensionTest > test3() STANDARD_OUT
+    test3() took 5 ms.
+
+BUILD SUCCESSFUL in 9s
+5 actionable tasks: 5 executed
