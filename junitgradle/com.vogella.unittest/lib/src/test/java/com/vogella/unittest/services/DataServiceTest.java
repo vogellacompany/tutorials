@@ -25,7 +25,6 @@ import com.vogella.unittest.model.Movie;
 import com.vogella.unittest.model.Race;
 import com.vogella.unittest.model.Ring;
 import com.vogella.unittest.model.TolkienCharacter;
-import com.vogella.unittest.services.DataService;
 
 class DataServiceTest {
 
@@ -144,7 +143,7 @@ class DataServiceTest {
 	}
 
 	@Test
-	public void ensureServiceDoesNotRunToLong() {
+	void ensureServiceDoesNotRunToLong() {
 		assertTimeout(Duration.ofSeconds(3), () -> dataService.update());
 	}
 }
