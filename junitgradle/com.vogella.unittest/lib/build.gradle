@@ -41,3 +41,15 @@ tasks.named('test') {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
 }
+
+
+task slowTest(type: Test) {
+    useJUnitPlatform {
+        includeTags 'slow'
+    }
+}
+
+
+test {
+    testLogging.showStandardStreams = true 
+}

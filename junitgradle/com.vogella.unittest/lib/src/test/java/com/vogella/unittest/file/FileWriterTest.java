@@ -20,7 +20,7 @@ class FileWriterTest {
 
 	@Test
 	void ensureThatNonExistingFileThrowsAnException(@TempDir Path path) {
-		Path file = Path.of(path.toString(), "content.txt");
+		Path file = path.resolve("content.txt");
 		assertThrows(IOException.class, () -> {
 			FileWriter.appendFile(file, "Hello");
 		});
@@ -28,8 +28,7 @@ class FileWriterTest {
 
 	@Test
 	void ensureAppendingWorks(@TempDir Path path) throws IOException {
-
-		Path file = Path.of(path.toString(), "content.txt");
+		Path file = path.resolve("content.txt");
 		FileWriter.createFile(file);
 		FileWriter.appendFile(file, "Hello");
 
