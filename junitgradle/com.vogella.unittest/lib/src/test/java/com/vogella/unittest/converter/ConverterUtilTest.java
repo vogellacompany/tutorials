@@ -30,7 +30,7 @@ class ConverterUtilTest {
 			int celsius = entry[0];
 			int fahrenheit = entry[1];
 			return dynamicTest(fahrenheit + " Fahrenheit are " + celsius + " Celsius", () -> {
-				assertEquals(fahrenheit, ConverterUtil.convertCelsiusToFahrenheit(celsius));
+				assertEquals(celsius, ConverterUtil.convertFahrenheitToCelsius(fahrenheit));
 			});
 		});
 	}

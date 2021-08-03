@@ -11,3 +11,4 @@ Snap.*
 /.project
 .DS_Store
 .gradle
+*.class
