@@ -16,7 +16,7 @@ class EmailValidatorTest {
 
 	@Test
 	void emailValidator_CorrectEmailSubDomain_ReturnsTrue() {
-		assertFalse(EmailValidator.isValidEmail("lars.vogel@.com"));
+		assertTrue(EmailValidator.isValidEmail("lars.vogel@analytics.gmail.com"));
 	}
 
 	@Test

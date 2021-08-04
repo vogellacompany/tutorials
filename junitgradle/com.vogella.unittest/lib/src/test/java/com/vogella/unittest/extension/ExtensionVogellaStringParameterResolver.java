@@ -1,5 +1,7 @@
 package com.vogella.unittest.extension;
 
+import javax.inject.Named;
+
 import org.junit.jupiter.api.extension.ExtensionContext;
 import org.junit.jupiter.api.extension.ParameterContext;
 import org.junit.jupiter.api.extension.ParameterResolutionException;
@@ -10,13 +12,13 @@ public class ExtensionVogellaStringParameterResolver implements ParameterResolve
 	@Override
 	public boolean supportsParameter(ParameterContext parameterContext, ExtensionContext extensionContext) // <.>
 			throws ParameterResolutionException {
-		return (parameterContext.getParameter().getType().equals(String.class));
+		return (parameterContext.isAnnotated(Named.class)
+				&& parameterContext.getParameter().getType().equals(String.class));
 	}
 
 	@Override
 	public Object resolveParameter(ParameterContext parameterContext, ExtensionContext extensionContext)
 			throws ParameterResolutionException {
-		// This could evaluate test input based on external parameters
 		return "Demo data"; // <.>
 	}
 }

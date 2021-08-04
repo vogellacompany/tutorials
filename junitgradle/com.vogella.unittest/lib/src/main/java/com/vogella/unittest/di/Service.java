@@ -11,6 +11,9 @@ public class Service {
 	public Service() {
 	}
 
+	// Schreibe einen Test der ueberprüft das nur eine Constructor mit @Inject
+	// annotiert ist
+
 	public Service(String s) {
 		this.s = s;
 	}

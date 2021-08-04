@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
-class CheckTestInheritance implements CheckEquals {
+class CheckTestInheritanceTest implements CheckEquals {
 
 	@Override
 	public Object createInstance() {
