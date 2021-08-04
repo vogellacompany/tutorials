@@ -1,5 +1,7 @@
 package com.vogella.unittest.extension;
 
+import java.util.Optional;
+
 import javax.inject.Named;
 
 import org.junit.jupiter.api.extension.ExtensionContext;
@@ -19,6 +21,14 @@ public class ExtensionVogellaStringParameterResolver implements ParameterResolve
 	@Override
 	public Object resolveParameter(ParameterContext parameterContext, ExtensionContext extensionContext)
 			throws ParameterResolutionException {
-		return "Demo data"; // <.>
+		boolean annotated = parameterContext.isAnnotated(Named.class);
+		if (annotated) {
+			Optional<Named> findAnnotation = parameterContext.findAnnotation(Named.class);
+			Named named = findAnnotation.get();
+			if (named.value() != "") {
+				return named.value();
+			}
+		}
+		return "Not available";
 	}
 }

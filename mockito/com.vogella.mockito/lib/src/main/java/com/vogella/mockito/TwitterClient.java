@@ -2,6 +2,8 @@ package com.vogella.mockito;
 
 public class TwitterClient {
 
+	public String test = "";
+
 	public void sendTweet(ITweet tweet) {
 		String message = tweet.getMessage();
 
