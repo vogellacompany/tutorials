@@ -1,6 +1,7 @@
-package com.vogella.integrationtests;
+package com.vogella.unittest;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -38,7 +39,9 @@ class GithubIntegrationTests {
 		HttpRequest request = HttpRequest.newBuilder().uri(URI.create("https://api.github.com/users/vogella")).build();
 		HttpResponse<String> response = client.send(request, BodyHandlers.ofString());
 		String body = response.body();
+		// For easy to see the output
 		System.out.println(body);
+		assertTrue(body.contains("twitter_username\":\"vogella\""));
 		// TODO check for the twitter handler
 	}
 }

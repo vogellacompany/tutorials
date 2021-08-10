@@ -33,7 +33,7 @@ public class ParameterizedExampleTest {
 		}
 	}
 
-	@ParameterizedTest(name = "{0} * {1} = {2}")
+	@ParameterizedTest(name = "Muliplicator {0} * {1} = {2}")
 	@CsvSource({ "0,    1,   0", "1,    2,   2", "49,  50, 2450", "1,  100, 100" })
 	void add(int first, int second, int expectedResult) {
 		MyClass calculator = new MyClass();

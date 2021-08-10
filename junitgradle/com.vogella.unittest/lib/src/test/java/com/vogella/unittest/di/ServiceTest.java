@@ -1,10 +1,9 @@
 package com.vogella.unittest.di;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.lang.reflect.Constructor;
-import java.util.function.Supplier;
+import java.util.Hashtable;
 
 import javax.inject.Inject;
 
@@ -14,6 +13,9 @@ class ServiceTest {
 
 	@Test
 	void ensureJSR330Constructor() {
+
+		
+	
 		int count = 0;
 		Constructor<?>[] constructors = Service.class.getConstructors();
 		for (Constructor<?> constructor : constructors) {
@@ -23,7 +25,6 @@ class ServiceTest {
 			}
 		}
 		assertEquals(1, count);
-		assertTrue(false, (Supplier<String>) () -> "Fehler");
 	}
 
 }

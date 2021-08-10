@@ -28,6 +28,10 @@ public class TolkienCharacter {
 		this.name = name;
 	}
 
+	public int getAge() {
+		return age;
+	}
+
 	public void setAge(int age) {
 		if (age < 0) {
 			throw new IllegalArgumentException("Age is not allowed to be smaller than zero");

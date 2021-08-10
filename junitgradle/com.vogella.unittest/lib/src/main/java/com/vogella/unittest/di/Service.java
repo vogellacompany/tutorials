@@ -17,4 +17,5 @@ public class Service {
 	public Service(String s) {
 		this.s = s;
 	}
+
 }
