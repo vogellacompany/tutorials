@@ -35,6 +35,4 @@ class ConverterUtilTest {
 		});
 	}
 
-	// TODO Write a similar test fahrenheit to celsius
-
 }

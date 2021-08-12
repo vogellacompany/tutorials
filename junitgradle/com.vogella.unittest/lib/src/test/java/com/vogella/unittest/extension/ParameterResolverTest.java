@@ -23,4 +23,9 @@ class ParameterResolverTest {
 		assertEquals("Not available", parameter);
 	}
 
+	@Test
+	void ensureThisTestsSomething() {
+		assertNotNull("Hello");
+	}
+
 }
